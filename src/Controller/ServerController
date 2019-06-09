@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Controller;
+
+use App\Entity\Server;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+
+class ServerController extends AbstractController
+{
+    /**
+     * @Route("/servers")
+     */
+    public function show()
+    {
+        $server = new Server();
+        $server->setAddress("0.0.0.0");
+        $server->setClientId("581364");
+
+        return new Response("Hellow");
+    }
+
+}
