@@ -27,7 +27,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/server/{id}",  methods={"GET"})
+     * @Route("/api/servers/{id}",  methods={"GET"})
      * @param $id
      * @param EntityManagerInterface $em
      * @return JsonResponse
@@ -43,7 +43,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/server/{id}",  methods={"POST"})
+     * @Route("/api/servers/{id}",  methods={"POST"})
      * @param $id
      * @param EntityManagerInterface $em
      * @return JsonResponse
@@ -59,7 +59,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/server/{id}",  methods={"PUT"})
+     * @Route("/api/servers/{id}",  methods={"PUT"})
      * @param $id
      * @param EntityManagerInterface $em
      * @return JsonResponse

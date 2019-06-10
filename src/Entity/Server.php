@@ -19,11 +19,6 @@ class Server
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=false)
-     */
-    private $clientId;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $address;
@@ -63,22 +58,6 @@ class Server
     public function setActive(bool $active): void
     {
         $this->active = $active;
-    }
-
-    /**
-     * @return string
-     */
-    public function getClientId() : ?string
-    {
-        return $this->clientId;
-    }
-
-    /**
-     * @param string $clientId
-     */
-    public function setClientId(string $clientId): void
-    {
-        $this->clientId = $clientId;
     }
 
     /**
@@ -127,17 +106,5 @@ class Server
     public function setModificationDate($modificationDate): void
     {
         $this->modificationDate = $modificationDate;
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        $arr = [
-            "id" => $this->getId(),
-            "clientId" => $this->getClientId()
-        ];
-        return $arr;
     }
 }
