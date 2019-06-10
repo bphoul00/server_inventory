@@ -13,7 +13,7 @@ class Server
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="server_id",type="integer")
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
@@ -30,19 +30,18 @@ class Server
 
     /**
      * @ORM\Column(type="boolean")
-     * @Assert\NotNull()
      */
     private $active;
 
     /**
      * @var Carbon
-     * @ORM\Column(type="carbondatetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     protected $creationDate;
 
     /**
      * @var Carbon
-     * @ORM\Column(type="carbondatetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     protected $modificationDate;
 
@@ -130,5 +129,17 @@ class Server
     public function setModificationDate(Carbon $modificationDate): void
     {
         $this->modificationDate = $modificationDate;
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        $arr = [
+            "id" => $this->getId(),
+            "clientId" => $this->getClientId()
+        ];
+        return $arr;
     }
 }

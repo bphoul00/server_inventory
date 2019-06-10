@@ -13,7 +13,7 @@ class Application
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="application_id",type="integer")
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
@@ -40,19 +40,18 @@ class Application
 
     /**
      * @ORM\Column(type="boolean")
-     * @Assert\NotNull()
      */
     private $active;
 
     /**
      * @var Carbon
-     * @ORM\Column(type="carbondatetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     protected $creationDate;
 
     /**
      * @var Carbon
-     * @ORM\Column(type="carbondatetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     protected $modificationDate;
 

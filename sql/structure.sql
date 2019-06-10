@@ -1,3 +1,7 @@
+CREATE DATABASE servers;
+
+USE servers;
+
 CREATE TABLE `client`
 (
     `client_id`         INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -44,3 +48,24 @@ CREATE TABLE `server`
     `modification_date` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`server_id`)
 ) ENGINE = InnoDB;
+
+ALTER TABLE `servers`.`user`
+    ADD CONSTRAINT `fk_user_1`
+        FOREIGN KEY (`client_id`)
+            REFERENCES `servers`.`client` (`client_id`)
+            ON DELETE NO ACTION
+            ON UPDATE NO ACTION;
+
+ALTER TABLE `servers`.`application`
+    ADD CONSTRAINT `fk_application_1`
+        FOREIGN KEY (`client_id`)
+            REFERENCES `servers`.`client` (`client_id`)
+            ON DELETE NO ACTION
+            ON UPDATE NO ACTION;
+
+ALTER TABLE `servers`.`server`
+    ADD CONSTRAINT `fk_server_1`
+        FOREIGN KEY (`client_id`)
+            REFERENCES `servers`.`client` (`client_id`)
+            ON DELETE NO ACTION
+            ON UPDATE NO ACTION;

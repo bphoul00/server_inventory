@@ -13,7 +13,7 @@ class Client
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="client_id",type="integer")
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
@@ -25,19 +25,18 @@ class Client
 
     /**
      * @ORM\Column(type="boolean")
-     * @Assert\NotNull()
      */
     private $active;
 
     /**
      * @var Carbon
-     * @ORM\Column(type="carbondatetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     protected $creationDate;
 
     /**
      * @var Carbon
-     * @ORM\Column(type="carbondatetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     protected $modificationDate;
 

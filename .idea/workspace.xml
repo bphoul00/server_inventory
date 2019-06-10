@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="bc891b15-4111-4b8d-97a4-c2299cff1c19" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/structure.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/structure.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ServerController" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ServerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Server.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,58 +24,15 @@
       <executable />
     </execution>
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/sql/structure.sql">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="945">
-                    <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Client.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ServerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1701">
-              <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            <state relative-caret-position="714">
+              <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
               <folding>
-                <element signature="e#30#48#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2709">
-              <caret line="129" column="27" selection-start-line="129" selection-start-column="27" selection-end-line="129" selection-end-column="27" />
-              <folding>
-                <element signature="e#30#48#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/ApplicationRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-              <folding>
-                <element signature="e#34#61#0#PHP" expanded="true" />
+                <element signature="e#34#56#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -79,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repository/ServerRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="378">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
                 <element signature="e#34#56#0#PHP" expanded="true" />
               </folding>
@@ -89,34 +51,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding>
-                <element signature="e#34#54#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ServerController">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding>
-                <element signature="e#34#56#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="546">
+              <caret line="26" column="35" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="672">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+              <folding>
+                <element signature="e#30#48#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,8 +74,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Application.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="1113">
+              <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+              <folding>
+                <element signature="e#30#48#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+              <folding>
+                <element signature="e#30#48#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,22 +107,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1532">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="853">
+              <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/ClientRepository.php">
+        <entry file="file://$PROJECT_DIR$/sql/structure.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+            <state relative-caret-position="378">
+              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/data.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="99" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Notnu</find>
+      <find>not</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -156,19 +145,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Repository/ClientRepository.php" />
-        <option value="$PROJECT_DIR$/sql/structure.sql" />
-        <option value="$PROJECT_DIR$/src/Entity/Server.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Client.php" />
-        <option value="$PROJECT_DIR$/src/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Application.php" />
         <option value="$PROJECT_DIR$/src/Repository/ApplicationRepository.php" />
         <option value="$PROJECT_DIR$/src/Repository/ServerRepository.php" />
         <option value="$PROJECT_DIR$/src/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/src/Controller/ServerController" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/src/Service/ServerService.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/sql/structure.sql" />
+        <option value="$PROJECT_DIR$/sql/data.sql" />
+        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Client.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Application.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Server.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ServerController.php" />
       </list>
     </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -280,17 +276,6 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
     </include_path>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/symfony.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/php.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="3440" />
     <option name="height" value="1440" />
@@ -304,28 +289,39 @@
         <subPane>
           <expand>
             <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="server_inventory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server_inventory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="server_inventory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server_inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="server_inventory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server_inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server_inventory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server_inventory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="server_inventory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server_inventory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="symfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="server_inventory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server_inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server_inventory" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server_inventory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -337,13 +333,22 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Repository" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sql" />
       <recent name="$PROJECT_DIR$/src/Repository" />
       <recent name="$PROJECT_DIR$/src/Entity" />
     </key>
@@ -372,17 +377,20 @@
       <updated>1560111743273</updated>
       <workItem from="1560111744476" duration="3203000" />
       <workItem from="1560118293618" duration="5505000" />
+      <workItem from="1560125822441" duration="1021000" />
+      <workItem from="1560131211259" duration="1862000" />
+      <workItem from="1560133333541" duration="7055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8708000" />
+    <option name="totallyTimeSpent" value="18646000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="3440" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25132588" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25574544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -407,53 +415,19 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="168">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" column="59" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1532">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1701">
-          <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        <state relative-caret-position="315">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="e#30#48#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Application.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2709">
-          <caret line="129" column="27" selection-start-line="129" selection-start-column="27" selection-end-line="129" selection-end-column="27" />
-          <folding>
-            <element signature="e#30#48#0#PHP" expanded="true" />
+            <element signature="e#34#54#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -475,44 +449,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/ServerService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="35" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/structure.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="99" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+          <folding>
+            <element signature="e#30#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+          <folding>
+            <element signature="e#30#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding>
+            <element signature="e#30#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/ServerRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="378">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding>
             <element signature="e#34#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#34#54#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="853">
+          <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/structure.sql">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ServerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ServerController">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="714">
+          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
           <folding>
             <element signature="e#34#56#0#PHP" expanded="true" />
           </folding>

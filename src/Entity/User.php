@@ -13,7 +13,7 @@ class User
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="user_id",type="integer")
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
@@ -35,19 +35,18 @@ class User
 
     /**
      * @ORM\Column(type="boolean")
-     * @Assert\NotNull()
      */
     private $active;
 
     /**
      * @var Carbon
-     * @ORM\Column(type="carbondatetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     protected $creationDate;
 
     /**
      * @var Carbon
-     * @ORM\Column(type="carbondatetime", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     protected $modificationDate;
 
