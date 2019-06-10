@@ -140,7 +140,7 @@ class User implements UserInterface
     /**
      * @return boolean
      */
-    public function getActive() : boolean
+    public function getActive() : bool
     {
         return $this->active;
     }
@@ -148,7 +148,7 @@ class User implements UserInterface
     /**
      * @param boolean $active
      */
-    public function setActive(boolean $active): void
+    public function setActive(bool $active): void
     {
         $this->active = $active;
     }
