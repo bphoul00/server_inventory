@@ -6,7 +6,7 @@ use App\Entity\Server;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ServerController extends AbstractController
@@ -23,7 +23,7 @@ class ServerController extends AbstractController
         /** @var Server[] $servers */
         $servers = $repository->findAll();
 
-        return $this->json($servers);
+        return $this->json($servers, 200);
     }
 
     /**
@@ -39,39 +39,49 @@ class ServerController extends AbstractController
         /** @var Server $server */
         $server = $repository->find($id);
 
-        return $this->json($server);
+        return $this->json($server, 200);
     }
 
     /**
-     * @Route("/api/servers/{id}",  methods={"POST"})
-     * @param $id
-     * @param EntityManagerInterface $em
+     * @Route("/api/servers",  methods={"POST"})
+     * @param Request $request
      * @return JsonResponse
      */
-    public function add($id, EntityManagerInterface $em)
+    public function add(Request $request)
     {
-        $repository = $em->getRepository(Server::class);
+        $server = new Server();
+        if ($request->isMethod('POST')) {
+            $server->setAddress($request->request->get('address'));
 
-        /** @var Server $server */
-        $server = $repository->find($id);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($server);
+            $em->flush();
+        }
 
-        return $this->json($server);
+        return $this->json($server, 201);
     }
 
     /**
      * @Route("/api/servers/{id}",  methods={"PUT"})
      * @param $id
+     * @param Request $request
      * @param EntityManagerInterface $em
      * @return JsonResponse
      */
-    public function update($id, EntityManagerInterface $em)
+    public function update($id, Request $request, EntityManagerInterface $em)
     {
         $repository = $em->getRepository(Server::class);
 
         /** @var Server $server */
         $server = $repository->find($id);
+        if ($request->isMethod('POST')) {
+            $server->setAddress($request->request->get('address'));
 
-        return $this->json($server);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($server);
+            $em->flush();
+        }
+        return $this->json($server, 200);
     }
 
 }
