@@ -14,15 +14,14 @@ CREATE TABLE `client`
 
 CREATE TABLE `user`
 (
-    `user_id`           INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `id`                INT UNSIGNED NOT NULL AUTO_INCREMENT,
     `client_id`         INT UNSIGNED NOT NULL,
-    `username`          VARCHAR(255) NOT NULL,
     `password`          VARCHAR(255) NOT NULL,
+    `email`             VARCHAR(180) NOT NULL,
+    `roles`             JSON         NOT NULL,
     `active`            BOOLEAN      NOT NULL DEFAULT TRUE,
-    `creation_date`     DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `modification_date` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (`user_id`),
-    UNIQUE KEY `username` (`username`)
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `UNIQ_8D93D649E7927C74` (`email`)
 ) ENGINE = InnoDB;
 
 CREATE TABLE `application`

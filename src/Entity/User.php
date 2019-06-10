@@ -2,21 +2,30 @@
 
 namespace App\Entity;
 
-use Carbon\Carbon;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(name="user_id",type="integer")
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="string", length=180, unique=true)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
@@ -24,134 +33,125 @@ class User
     private $clientId;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=false)
-     */
-    private $username;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=false)
-     */
-    private $password;
-
-    /**
      * @ORM\Column(type="boolean")
      */
     private $active;
 
     /**
-     * @var Carbon
-     * @ORM\Column(type="datetime", nullable=false)
+     * @var string The hashed password
+     * @ORM\Column(type="string")
      */
-    protected $creationDate;
-
-    /**
-     * @var Carbon
-     * @ORM\Column(type="datetime", nullable=false)
-     */
-    protected $modificationDate;
-
-    public function __construct()
-    {
-        $this->active = true;
-        $this->creationDate = Carbon::now();
-        $this->modificationDate = Carbon::now();
-    }
+    private $password;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-
-    public function getActive(): ?bool
+    public function getEmail(): ?string
     {
-        return $this->active;
+        return $this->email;
     }
 
-    public function setActive(bool $active): self
+    public function setEmail(string $email): self
     {
-        $this->active = $active;
+        $this->email = $email;
 
         return $this;
     }
 
     /**
-     * @return Carbon
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
      */
-    public function getCreationDate(): Carbon
+    public function getUsername(): string
     {
-        return $this->creationDate;
+        return (string) $this->email;
     }
 
     /**
-     * @param Carbon $creationDate
+     * @see UserInterface
      */
-    public function setCreationDate(Carbon $creationDate): void
+    public function getRoles(): array
     {
-        $this->creationDate = $creationDate;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
     }
 
     /**
-     * @return Carbon
+     * @see UserInterface
      */
-    public function getModificationDate(): Carbon
+    public function getPassword(): string
     {
-        return $this->modificationDate;
+        return (string) $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
     }
 
     /**
-     * @param Carbon $modificationDate
+     * @see UserInterface
      */
-    public function setModificationDate(Carbon $modificationDate): void
+    public function getSalt()
     {
-        $this->modificationDate = $modificationDate;
+        // not needed when using the "bcrypt" algorithm in security.yaml
     }
 
     /**
-     * @return mixed
+     * @see UserInterface
      */
-    public function getClientId()
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
+
+    /**
+     * @return string
+     */
+    public function getClientId(): ?string
     {
         return $this->clientId;
     }
 
     /**
-     * @param mixed $clientId
+     * @param string $clientId
      */
-    public function setClientId($clientId): void
+    public function setClientId(string $clientId): void
     {
         $this->clientId = $clientId;
     }
 
     /**
-     * @return string|null
+     * @return boolean
      */
-    public function getUsername() :?string
+    public function getActive() : boolean
     {
-        return $this->username;
+        return $this->active;
     }
 
     /**
-     * @param string $username
+     * @param boolean $active
      */
-    public function setUsername(string $username): void
+    public function setActive(boolean $active): void
     {
-        $this->username = $username;
+        $this->active = $active;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getPassword() : ?string
-    {
-        return $this->password;
-    }
 
-    /**
-     * @param string $password
-     */
-    public function setPassword(string $password): void
-    {
-        $this->password = $password;
-    }
 }
