@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ApplicationRepository")
  */
 class Application
 {
@@ -44,13 +44,11 @@ class Application
     private $active;
 
     /**
-     * @var Carbon
      * @ORM\Column(type="datetime", nullable=false)
      */
     protected $creationDate;
 
     /**
-     * @var Carbon
      * @ORM\Column(type="datetime", nullable=false)
      */
     protected $modificationDate;
@@ -150,34 +148,22 @@ class Application
         $this->authentication_key = $authentication_key;
     }
 
-    /**
-     * @return Carbon
-     */
-    public function getCreationDate(): Carbon
+    public function getCreationDate()
     {
         return $this->creationDate;
     }
 
-    /**
-     * @param Carbon $creationDate
-     */
-    public function setCreationDate(Carbon $creationDate): void
+    public function setCreationDate($creationDate): void
     {
         $this->creationDate = $creationDate;
     }
 
-    /**
-     * @return Carbon
-     */
-    public function getModificationDate(): Carbon
+    public function getModificationDate()
     {
         return $this->modificationDate;
     }
 
-    /**
-     * @param Carbon $modificationDate
-     */
-    public function setModificationDate(Carbon $modificationDate): void
+    public function setModificationDate($modificationDate): void
     {
         $this->modificationDate = $modificationDate;
     }

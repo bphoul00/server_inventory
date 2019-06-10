@@ -83,34 +83,22 @@ class Client
         $this->active = $active;
     }
 
-    /**
-     * @return Carbon
-     */
-    public function getCreationDate(): Carbon
+    public function getCreationDate()
     {
         return $this->creationDate;
     }
 
-    /**
-     * @param Carbon $creationDate
-     */
-    public function setCreationDate(Carbon $creationDate): void
+    public function setCreationDate($creationDate): void
     {
         $this->creationDate = $creationDate;
     }
 
-    /**
-     * @return Carbon
-     */
-    public function getModificationDate(): Carbon
+    public function getModificationDate()
     {
         return $this->modificationDate;
     }
 
-    /**
-     * @param Carbon $modificationDate
-     */
-    public function setModificationDate(Carbon $modificationDate): void
+    public function setModificationDate($modificationDate): void
     {
         $this->modificationDate = $modificationDate;
     }

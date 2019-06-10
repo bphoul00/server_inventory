@@ -5,15 +5,16 @@ namespace App\Controller;
 use App\Entity\Server;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ServerController extends AbstractController
 {
     /**
-     * @Route("/servers",  methods={"GET"})
+     * @Route("/api/servers",  methods={"GET"})
      * @param EntityManagerInterface $em
-     * @return Response
+     * @return JsonResponse
      */
     public function showList(EntityManagerInterface $em)
     {
@@ -22,43 +23,55 @@ class ServerController extends AbstractController
         /** @var Server[] $servers */
         $servers = $repository->findAll();
 
-        return new Response(json_encode($servers));
+        return $this->json($servers);
     }
 
     /**
-     * @Route("/servers/{id}",  methods={"GET"})
+     * @Route("/api/server/{id}",  methods={"GET"})
+     * @param $id
+     * @param EntityManagerInterface $em
+     * @return JsonResponse
      */
-    public function showOne($id)
+    public function showOne($id, EntityManagerInterface $em)
     {
-        $server = new Server();
-        $server->setAddress("0.0.0.0");
-        $server->setClientId("581364");
+        $repository = $em->getRepository(Server::class);
 
-        return new Response("one");
+        /** @var Server $server */
+        $server = $repository->find($id);
+
+        return $this->json($server);
     }
 
     /**
-     * @Route("/servers/{id}",  methods={"POST"})
+     * @Route("/api/server/{id}",  methods={"POST"})
+     * @param $id
+     * @param EntityManagerInterface $em
+     * @return JsonResponse
      */
-    public function add($id)
+    public function add($id, EntityManagerInterface $em)
     {
-        $server = new Server();
-        $server->setAddress("0.0.0.0");
-        $server->setClientId("581364");
+        $repository = $em->getRepository(Server::class);
 
-        return new Response("Create");
+        /** @var Server $server */
+        $server = $repository->find($id);
+
+        return $this->json($server);
     }
 
     /**
-     * @Route("/servers/{id}",  methods={"PUT"})
+     * @Route("/api/server/{id}",  methods={"PUT"})
+     * @param $id
+     * @param EntityManagerInterface $em
+     * @return JsonResponse
      */
-    public function update($id)
+    public function update($id, EntityManagerInterface $em)
     {
-        $server = new Server();
-        $server->setAddress("0.0.0.0");
-        $server->setClientId("581364");
+        $repository = $em->getRepository(Server::class);
 
-        return new Response("Update");
+        /** @var Server $server */
+        $server = $repository->find($id);
+
+        return $this->json($server);
     }
 
 }
