@@ -26,7 +26,7 @@ In the project folder
 ```
 ./bin/console doctrine:fixtures:load
 ```
-
+All of user's password are : 123456
 
 
 Left To Do
