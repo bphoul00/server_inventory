@@ -28,12 +28,12 @@ class ApiTokenAuthenticator extends AbstractGuardAuthenticator
     public function supports(Request $request)
     {
         return $request->headers->has("Authorization") &&
-            0 === strpos($request->headers->has("Authorization"), 'Bearer ');
+            0 === strpos($request->headers->get('Authorization'), 'Bearer ');
     }
 
     public function getCredentials(Request $request)
     {
-        $authorizationHeader = $request->headers->has("Authorization");
+        $authorizationHeader = $request->headers->get('Authorization');
 
         return substr($authorizationHeader, 7);
     }
@@ -47,7 +47,7 @@ class ApiTokenAuthenticator extends AbstractGuardAuthenticator
             throw new CustomUserMessageAuthenticationException("Invalid API Token");
         }
 
-        if (!$token->isExpired()) {
+        if ($token->isExpired()) {
             throw new CustomUserMessageAuthenticationException("Token is expired");
         }
 
@@ -71,7 +71,11 @@ class ApiTokenAuthenticator extends AbstractGuardAuthenticator
 
     public function start(Request $request, AuthenticationException $authException = null)
     {
+        $data = [
+            'message' => 'Authentication Required'
+        ];
 
+        return new JsonResponse($data, 400);
     }
 
     public function supportsRememberMe()
