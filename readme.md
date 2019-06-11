@@ -1,5 +1,5 @@
 Require tool
-- Docker
+- Apache2/Docker/Vagrant/Ngix
 - PHP 7.2
 - Symfony 4.3
 - mysql 5.7
