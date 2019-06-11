@@ -29,7 +29,7 @@ In the project folder
 
 
 
-To Do
+Left To Do
 - Extract User from the Administration Zone and store it as Service
 - Backend Validation for Server API
 - Add better row for server
