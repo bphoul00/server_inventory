@@ -9,18 +9,33 @@
 {% endblock %}
 
 {% block body %}
+    <br>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <form  action="{{ path('api_servers_update') }}" method="PUT">
-                    <h1 class="h3 mb-3 font-weight-normal">Create A New Server</h1>
-                    <label for="inputAddress" class="sr-only">Address IP</label>
-                    <input type="address" name="address" id="inputAddress" class="form-control" placeholder="Address" required autofocus>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">
-                        Save
-                    </button>
-                </form>
+        <form  method="post">
+            <div class="form-group">
+                <label for="inputId">Server ID</label>
+                <input class="form-control" id="inputId" placeholder="{{ server.id }}" disabled>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="inputStatus">Status</label>
+                <input class="form-control" id="inputStatus" placeholder="{{ server.active ? "Active" : "Inactive" }}" disabled>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address IP</label>
+                <input type="text" minlength="7" maxlength="15" size="15" name="address" class="form-control" id="inputAddress" required pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" placeholder="0.0.0.0">
+                <small id="emailHelp" class="form-text text-muted">Enter Address IP</small>
+            </div>
+            <div class="form-group">
+                <label for="inputCreationDate">Creation Date</label>
+                <input class="form-control" id="inputCreationDate" placeholder="{{ server.creationDate }}" disabled>
+            </div>
+            <div class="form-group">
+                <label for="inputModificationDate">Modification Date</label>
+                <input class="form-control" id="inputModificationDate" placeholder="{{ server.modificationDate }}" disabled>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
+
 {% endblock %}

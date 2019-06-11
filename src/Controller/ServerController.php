@@ -27,7 +27,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/servers/{id}", name="api_servers_one",  methods={"GET"})
+     * @Route("/api/servers/{id}", name="api_servers_find_one",  methods={"GET"})
      * @param $id
      * @param EntityManagerInterface $em
      * @return JsonResponse
@@ -51,7 +51,7 @@ class ServerController extends AbstractController
     {
         $server = new Server();
         if ($request->isMethod('POST')) {
-            $server->setAddress($request->request->get('address'));
+            $server->setAddress($request->query->get('address'));
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($server);
@@ -75,7 +75,7 @@ class ServerController extends AbstractController
         /** @var Server $server */
         $server = $repository->find($id);
         if ($request->isMethod('POST')) {
-            $server->setAddress($request->request->get('address'));
+            $server->setAddress($request->query->get('address'));
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($server);
