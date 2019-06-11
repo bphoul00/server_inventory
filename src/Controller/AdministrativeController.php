@@ -127,8 +127,8 @@ class AdministrativeController extends AbstractController
      * @return string
      */
     public function url(){
-        //TODO remove this line
-        return "http://127.0.0.1:8001";
+        //cURL does not work on symfony server, uncomment if working.
+        //return "http://127.0.0.1:8001";
         if (isset($_SERVER['HTTPS'])) {
             $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
         } else {

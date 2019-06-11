@@ -27,7 +27,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/servers/{id}", name="api_servers_find_one",  methods={"GET"})
+     * @Route("/api/servers/{id}", name="api_servers_one",  methods={"GET"})
      * @param $id
      * @param EntityManagerInterface $em
      * @return JsonResponse
@@ -62,7 +62,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/servers/{id}", name="api_servers_update", methods={"PUT"})
+     * @Route("/api/servers/{id}", name="api_servers_update", methods={"POST"})
      * @param $id
      * @param Request $request
      * @param EntityManagerInterface $em
@@ -70,10 +70,12 @@ class ServerController extends AbstractController
      */
     public function update($id, Request $request, EntityManagerInterface $em)
     {
+
         $repository = $em->getRepository(Server::class);
 
         /** @var Server $server */
         $server = $repository->find($id);
+
         if ($request->isMethod('POST')) {
             $server->setAddress($request->query->get('address'));
 
