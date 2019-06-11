@@ -3,12 +3,12 @@
 
 namespace App\Controller;
 
-use App\Entity\Server;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpClient\HttpClient;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use GuzzleHttp\Client;
+
 
 /**
  * @Route("/administrative")
@@ -19,21 +19,19 @@ class AdministrativeController extends AbstractController
     /**
      * @Route("/index", name="administrative_index", methods={"GET"})
      * @return Response
-     * @throws \Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface
-     * @throws \Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface
-     * @throws \Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function index()
     {
-/*
+
         $httpClient = HttpClient::create();
-        $response = $httpClient->request('GET', 'http://127.0.0.1:8000/api/servers');
-        dd($response);
+        $response = $httpClient->request('GET', 'http://www.mocky.io/v2/5cff0b5d3200000f0045f2c9');
+        $servers =json_decode($response->getContent());
 
         return $this->render('administrative/index.html.twig', [
-            'test' => $response,
+            'servers' => $servers,
         ]);
-*/
+
     }
 
     /**

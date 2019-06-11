@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Create Server!{% endblock %}
+{% block title %}Edit Server{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <form  action="http://127.0.0.1:8000/api/servers" method="PUT">
+                <form  action="{{ path('api_servers_update') }}" method="PUT">
                     <h1 class="h3 mb-3 font-weight-normal">Create A New Server</h1>
                     <label for="inputAddress" class="sr-only">Address IP</label>
                     <input type="address" name="address" id="inputAddress" class="form-control" placeholder="Address" required autofocus>

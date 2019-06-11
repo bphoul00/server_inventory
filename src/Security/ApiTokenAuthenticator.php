@@ -2,7 +2,8 @@
 
 namespace App\Security;
 
-use App\Repository\ApiTokenRepository;
+use App\Entity\User;
+use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
@@ -14,15 +15,16 @@ use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
 
 class ApiTokenAuthenticator extends AbstractGuardAuthenticator
 {
-    /**
-     * @var ApiTokenRepository
-     */
-    private $apiTokenRepository;
 
-    public function __construct(ApiTokenRepository $apiTokenRepository)
+    /**
+     * @var UserRepository
+     */
+    private $userRepository;
+
+    public function __construct(UserRepository $userRepository)
     {
 
-        $this->apiTokenRepository = $apiTokenRepository;
+        $this->userRepository = $userRepository;
     }
 
     public function supports(Request $request)
@@ -40,18 +42,19 @@ class ApiTokenAuthenticator extends AbstractGuardAuthenticator
 
     public function getUser($credentials, UserProviderInterface $userProvider)
     {
-        $token = $this->apiTokenRepository->findOneBy([
-            'token' => $credentials
+        /**@var User $user*/
+        $user = $this->userRepository->findOneBy([
+            'apiToken' => $credentials
         ]);
-        if (!$token) {
+        if (!$user) {
             throw new CustomUserMessageAuthenticationException("Invalid API Token");
         }
 
-        if ($token->isExpired()) {
-            throw new CustomUserMessageAuthenticationException("Token is expired");
+        if ($user->getActive() == false) {
+            throw new CustomUserMessageAuthenticationException("User is deactivated");
         }
 
-        return $token->getUser();
+        return $user;
     }
 
     public function checkCredentials($credentials, UserInterface $user)

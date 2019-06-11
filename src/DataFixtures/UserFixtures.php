@@ -32,13 +32,7 @@ class UserFixtures extends Fixture
         $server = new Server();
         $server->setAddress("0.0.0.0");
 
-
-
-        $api = new ApiToken($user);
-
-
         $manager->persist($user);
-        $manager->persist($api);
         $manager->persist($server);
 
 

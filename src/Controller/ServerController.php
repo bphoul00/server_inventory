@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ServerController extends AbstractController
 {
     /**
-     * @Route("/api/servers",  methods={"GET"})
+     * @Route("/api/servers", name="api_servers_list", methods={"GET"})
      * @param EntityManagerInterface $em
      * @return JsonResponse
      */
@@ -27,7 +27,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/servers/{id}",  methods={"GET"})
+     * @Route("/api/servers/{id}", name="api_servers_one",  methods={"GET"})
      * @param $id
      * @param EntityManagerInterface $em
      * @return JsonResponse
@@ -43,7 +43,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/servers",  methods={"POST"})
+     * @Route("/api/servers", name="api_servers_add", methods={"POST"})
      * @param Request $request
      * @return JsonResponse
      */
@@ -62,7 +62,7 @@ class ServerController extends AbstractController
     }
 
     /**
-     * @Route("/api/servers/{id}",  methods={"PUT"})
+     * @Route("/api/servers/{id}", name="api_servers_update", methods={"PUT"})
      * @param $id
      * @param Request $request
      * @param EntityManagerInterface $em
